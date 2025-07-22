@@ -1,7 +1,7 @@
 # OpenSSL_Checker
 
 ### Step 1. 
-Install OpenSSL(light version is enough) `https://slproweb.com/products/Win32OpenSSL.html`
+[Download OpenSSL (Light Version)](https://slproweb.com/products/Win32OpenSSL.html)
 
 ### Step 2. 
 Edit the system environment variables(add bin folder to "Path")
