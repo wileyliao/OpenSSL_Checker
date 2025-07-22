@@ -7,8 +7,10 @@ Install OpenSSL(light version is enough) `https://slproweb.com/products/Win32Ope
 Edit the system environment variables(add bin folder to "Path")
 
 ### Step 3. 
-Using command `openssl version` to check if its installed sucessfully
-
+Run the script to check if its installed sucessfully
+```powershell
+openssl version
+```
 ### Step 4. 
 Download "Check-CertKeyMatch.ps1"
 
@@ -17,4 +19,4 @@ Run the script with your cert and key path:
 
 ```powershell
 .\Check-CertKeyMatch.ps1 -CertPath ".\server.crt" -KeyPath ".\server.key"
-
+```
