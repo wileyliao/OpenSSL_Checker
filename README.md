@@ -44,8 +44,12 @@ Write-Host "`n CERT Public Key Hash:  $certPubKey"
 Write-Host "KEY Public Key Hash: $keyPubKey`n"
 
 if ($certPubKey -eq $keyPubKey) {
-    Write-Host "CERT MATCH KEY"
+    Write-Host "===========Result==========="
+    Write-Host "===    CERT MATCH KEY    ==="
+    Write-Host "============================"
 } else {
-    Write-Host "!!!CERT NOT MATCH KEY!!!"
+    Write-Host "===========Result==========="
+    Write-Host "===  CERT NOT MATCH KEY  ==="
+    Write-Host "============================"
 }
 ```
