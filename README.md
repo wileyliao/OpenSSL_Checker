@@ -13,5 +13,8 @@ Using command `openssl version` to check if its installed sucessfully
 Download "Check-CertKeyMatch.ps1"
 
 ### Step 5. 
-Run `.\Check-CertKeyMatch.ps1 -CertPath ".\your_cert.crt" -KeyPath ".\your_private.key"`
+Run the script with your cert and key path:
+
+```powershell
+.\Check-CertKeyMatch.ps1 -CertPath ".\server.crt" -KeyPath ".\server.key"
 
