@@ -7,7 +7,7 @@ Install OpenSSL(light version is enough) `https://slproweb.com/products/Win32Ope
 Edit the system environment variables(add bin folder to "Path")
 
 ### Step 3. 
-Using `openssl version` command to check if its installed sucessfully
+Using command `openssl version` to check if its installed sucessfully
 
 ### Step 4. 
 Download "Check-CertKeyMatch.ps1"
