@@ -20,3 +20,7 @@ Run the script with your cert and key path:
 ```powershell
 .\Check-CertKeyMatch.ps1 -CertPath ".\server.crt" -KeyPath ".\server.key"
 ```
+## Generate localhost ssl for dev usage
+```powershell
+openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout cert.key -out full_chain.crt -subj "/C=TW/ST=Taiwan/L=Taipei/O=hsai_dev/CN=localhost"
+```
