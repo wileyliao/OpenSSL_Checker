@@ -22,11 +22,21 @@ Run the script with your cert and key path:
 ```
 
 ## 2. Self-signed CERT
-###  2-1. Generate localhost ssl for dev usage (by using .cnf file)
+###  2-1. Generate ssl for dev usage (by using .cnf file, expiry date = 100 years)
 ```powershell
-openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout cert.key -out full_chain.crt -config openssl-ai.cnf -extensions v3_req
+openssl req -x509 -nodes -days 36500 -newkey rsa:2048 -keyout cert.key -out full_chain.crt -config openssl-ai.cnf -extensions v3_req
 ```
 ### 2-2. Check CERT was signed by which organization
 ```powershell
 openssl x509 -in full_chain.crt -noout -subject
 ```
+
+## 3. Authorize Self-signed CERT
+###  3-1. Double click .crt that generat from step 2.
+>- 安裝憑證
+>- 本機電腦
+>- 將所有憑證放入以下的存放去
+>- 瀏覽：受信任的根憑證授權單位
+### 3-2. If using server name(xxxx.xxxxx) instead of IP address:
+>- Open notepad as Admin of file: `C:\Windows\System32\drivers\etc\hosts`
+>- Add `your.ip.address xxxx.xxxxx` in the last line for DNS mapping of this PC
