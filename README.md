@@ -31,12 +31,23 @@ openssl req -x509 -nodes -days 36500 -newkey rsa:2048 -keyout cert.key -out full
 openssl x509 -in full_chain.crt -noout -subject
 ```
 
-## 3. Authorize Self-signed CERT
-###  3-1. Double click .crt that generat from step 2.
+## 3. Authorize Self-signed CERT on Windows
+###  3-1. Double click .crt file that generate from step 2.
 >- 安裝憑證
 >- 本機電腦
 >- 將所有憑證放入以下的存放去
 >- 瀏覽：受信任的根憑證授權單位
+
 ### 3-2. If using server name(xxxx.xxxxx) instead of IP address:
 >- Open notepad as Admin of file: `C:\Windows\System32\drivers\etc\hosts`
 >- Add `your.ip.address xxxx.xxxxx` in the last line for DNS mapping of this PC
+
+## 4. Authorize Self-signed CERT on IOS
+###  3-1. download .crt file that generate from step 2. but using `.cer` file
+>- 設定
+>- 描述檔
+>- 信任此描述檔
+
+### 3-2. If using server name(xxxx.xxxxx) instead of IP address:
+>- Need to set DNS on your router instead(IOS is not available this setting)
+
