@@ -22,9 +22,9 @@ Run the script with your cert and key path:
 ```
 
 ## 2. Self-signed CERT
-###  2-1. Generate localhost ssl for dev usage
+###  2-1. Generate localhost ssl for dev usage (by using .cnf file)
 ```powershell
-openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout cert.key -out full_chain.crt -subj "/C=TW/ST=Taiwan/L=Taipei/O=hsai_dev/CN=localhost"
+openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout cert.key -out full_chain.crt -config openssl-ai.cnf -extensions v3_req
 ```
 ### 2-2. Check CERT was signed by which organization
 ```powershell
