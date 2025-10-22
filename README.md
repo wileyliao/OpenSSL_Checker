@@ -24,7 +24,7 @@ Run the script with your cert and key path:
 ## 2. Self-signed CERT
 ###  2-1. Generate ssl for dev usage (by using .cnf file, expiry date = 100 years)
 ```powershell
-openssl req -x509 -nodes -days 36500 -newkey rsa:2048 -keyout cert.key -out full_chain.crt -config openssl-ai.cnf -extensions v3_req
+openssl req -x509 -nodes -days 36500 -newkey rsa:2048 -keyout cert.key -out full_chain.crt -config openssl.cnf -extensions v3_req
 ```
 ### 2-2. Check CERT was signed by which organization
 ```powershell
